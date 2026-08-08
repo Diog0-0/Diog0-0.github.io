@@ -1,0 +1,55 @@
+<section id="experience" class="border-t border-white/5 py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mb-16">
+      <p class="font-mono text-sm text-purple-400">
+        03 / {{ languageService.is('pt') ? 'EXPERIÊNCIA' : 'EXPERIENCE' }}
+      </p>
+
+      <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+        {{
+          languageService.is('pt') ? 'Minha trajetória profissional.' : 'My professional journey.'
+        }}
+      </h2>
+    </div>
+
+    <div class="relative">
+      <!-- Timeline -->
+      <div class="absolute left-[7px] top-2 bottom-2 w-px bg-white/10"></div>
+
+      <div class="space-y-12">
+        @for (experience of experiences; track experience.company + experience.period) {
+          <div class="relative pl-10">
+            <!-- Timeline point -->
+            <div
+              class="absolute left-0 top-2 h-4 w-4 rounded-full border-2 border-purple-400 bg-[#050505] shadow-[0_0_15px_rgba(139,92,246,0.5)]"
+            ></div>
+
+            <div class="grid gap-4 md:grid-cols-[180px_1fr]">
+              <div>
+                <p class="font-mono text-sm text-zinc-500">
+                  {{ experience.period }}
+                </p>
+              </div>
+
+              <div>
+                <p class="text-sm font-medium text-purple-400">
+                  {{ experience.company }}
+                </p>
+
+                <h3 class="mt-1 text-2xl font-semibold text-white">
+                  {{ languageService.is('pt') ? experience.rolePt : experience.roleEn }}
+                </h3>
+
+                <p class="mt-4 max-w-2xl leading-7 text-zinc-400">
+                  {{
+                    languageService.is('pt') ? experience.descriptionPt : experience.descriptionEn
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

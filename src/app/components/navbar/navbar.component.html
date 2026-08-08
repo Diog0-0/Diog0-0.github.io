@@ -1,0 +1,71 @@
+<nav class="fixed left-0 right-0 top-0 z-50 border-b border-white/5 bg-black/30 backdrop-blur-xl">
+  <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+    <!-- Logo -->
+    <a href="#" class="font-mono text-xl font-bold tracking-tight">
+      <span class="text-white">DN</span>
+      <span class="text-purple-400">.</span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <div class="hidden items-center gap-8 md:flex">
+      <a href="#about" class="text-sm text-zinc-400 transition hover:text-white">
+        {{ languageService.is('pt') ? 'Sobre' : 'About' }}
+      </a>
+
+      <a href="#skills" class="text-sm text-zinc-400 transition hover:text-white">
+        {{ languageService.is('pt') ? 'Tecnologias' : 'Skills' }}
+      </a>
+
+      <a href="#experience" class="text-sm text-zinc-400 transition hover:text-white">
+        {{ languageService.is('pt') ? 'Experiência' : 'Experience' }}
+      </a>
+
+      <a href="#projects" class="text-sm text-zinc-400 transition hover:text-white">
+        {{ languageService.is('pt') ? 'Projetos' : 'Projects' }}
+      </a>
+
+      <a href="#contact" class="text-sm text-zinc-400 transition hover:text-white">
+        {{ languageService.is('pt') ? 'Contato' : 'Contact' }}
+      </a>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Language -->
+      <div class="flex items-center rounded-lg border border-white/10 bg-white/5 p-1">
+        <button
+          type="button"
+          (click)="changeLanguage('pt')"
+          class="rounded-md px-2.5 py-1 text-xs font-medium transition"
+          [class.bg-white]="languageService.is('pt')"
+          [class.text-black]="languageService.is('pt')"
+          [class.text-zinc-400]="languageService.is('en')"
+          [class.hover:text-white]="languageService.is('en')"
+        >
+          PT
+        </button>
+
+        <button
+          type="button"
+          (click)="changeLanguage('en')"
+          class="rounded-md px-2.5 py-1 text-xs font-medium transition"
+          [class.bg-white]="languageService.is('en')"
+          [class.text-black]="languageService.is('en')"
+          [class.text-zinc-400]="languageService.is('pt')"
+          [class.hover:text-white]="languageService.is('pt')"
+        >
+          EN
+        </button>
+      </div>
+
+      <!-- CV -->
+      <a
+        href="assets/cv/diogo-nogueira-cv.pdf"
+        download
+        class="hidden rounded-lg border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-300 transition hover:border-purple-400/60 hover:bg-purple-500/20 md:block"
+      >
+        {{ languageService.is('pt') ? 'Baixar CV' : 'Download CV' }}
+      </a>
+    </div>
+  </div>
+</nav>
