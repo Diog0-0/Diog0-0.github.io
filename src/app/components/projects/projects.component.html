@@ -2,20 +2,19 @@
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mb-16">
       <p class="font-mono text-sm text-purple-400">
-        04 / {{ languageService.is('pt') ? 'PROJETOS' : 'PROJECTS' }}
+        04 / {{ languageService.translations().projects.label }}
       </p>
 
       <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-        {{ languageService.is('pt') ? 'Projetos selecionados.' : 'Selected work.' }}
+        {{ languageService.translations().projects.title }}
       </h2>
     </div>
 
     <div class="grid gap-6 lg:grid-cols-3">
-      @for (project of projects; track project.name) {
+      @for (project of resume.projects; track project.name) {
         <article
           class="group flex min-h-[320px] flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:-translate-y-1 hover:border-purple-400/30 hover:bg-purple-500/[0.03]"
         >
-          <!-- Project number -->
           <p class="font-mono text-sm text-zinc-600">0{{ $index + 1 }}</p>
 
           <h3 class="mt-8 text-2xl font-semibold text-white">
@@ -23,10 +22,9 @@
           </h3>
 
           <p class="mt-4 flex-1 leading-7 text-zinc-400">
-            {{ languageService.is('pt') ? project.descriptionPt : project.descriptionEn }}
+            {{ project.description[languageService.language()] }}
           </p>
 
-          <!-- Technologies -->
           <div class="mt-6 flex flex-wrap gap-2">
             @for (technology of project.technologies; track technology) {
               <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs text-zinc-400">
@@ -35,14 +33,13 @@
             }
           </div>
 
-          <!-- Link -->
           <a
             [href]="project.url"
             target="_blank"
             rel="noopener noreferrer"
             class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-purple-400 transition group-hover:text-purple-300"
           >
-            {{ languageService.is('pt') ? 'Ver projeto' : 'View project' }}
+            {{ languageService.translations().projects.viewProject }}
 
             <span class="transition-transform group-hover:translate-x-1"> → </span>
           </a>

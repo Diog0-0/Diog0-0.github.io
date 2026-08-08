@@ -1,4 +1,6 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, computed, signal } from '@angular/core';
+
+import { TRANSLATIONS } from '../constants/translations.constant';
 
 export type Language = 'pt' | 'en';
 
@@ -7,6 +9,8 @@ export type Language = 'pt' | 'en';
 })
 export class LanguageService {
   readonly language = signal<Language>('pt');
+
+  readonly translations = computed(() => TRANSLATIONS[this.language()]);
 
   setLanguage(language: Language): void {
     this.language.set(language);

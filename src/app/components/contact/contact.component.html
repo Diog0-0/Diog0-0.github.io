@@ -1,55 +1,49 @@
 <section id="contact" class="border-t border-white/5 py-32">
   <div class="mx-auto max-w-5xl px-6 text-center lg:px-8">
     <p class="font-mono text-sm text-purple-400">
-      05 / {{ languageService.is('pt') ? 'CONTATO' : 'CONTACT' }}
+      05 / {{ languageService.translations().contact.label }}
     </p>
 
     <h2 class="mt-6 text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-      {{
-        languageService.is('pt')
-          ? 'Vamos construir algo juntos.'
-          : "Let's build something together."
-      }}
+      {{ languageService.translations().contact.title }}
     </h2>
 
     <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-      {{
-        languageService.is('pt')
-          ? 'Tem um projeto em mente ou quer conversar sobre uma oportunidade? Entre em contato comigo.'
-          : 'Have a project in mind or want to talk about an opportunity? Get in touch with me.'
-      }}
+      {{ languageService.translations().contact.description }}
     </p>
 
-    <!-- Contact cards -->
     <div class="mt-12 grid gap-4 sm:grid-cols-2">
       <a
-        href="mailto:SEU_EMAIL"
+        [href]="'mailto:' + resume.personal.email"
         class="rounded-xl border border-white/10 bg-white/[0.02] p-6 text-left transition hover:border-purple-400/30 hover:bg-white/[0.04]"
       >
         <p class="text-sm text-zinc-500">Email</p>
 
-        <p class="mt-2 text-lg font-medium text-white">SEU_EMAIL</p>
+        <p class="mt-2 text-lg font-medium text-white">
+          {{ resume.personal.email }}
+        </p>
       </a>
 
       <a
-        href="tel:SEU_TELEFONE"
+        [href]="'tel:' + resume.personal.phone"
         class="rounded-xl border border-white/10 bg-white/[0.02] p-6 text-left transition hover:border-cyan-400/30 hover:bg-white/[0.04]"
       >
         <p class="text-sm text-zinc-500">
-          {{ languageService.is('pt') ? 'Telefone' : 'Phone' }}
+          {{ languageService.translations().contact.phone }}
         </p>
 
-        <p class="mt-2 text-lg font-medium text-white">SEU_TELEFONE</p>
+        <p class="mt-2 text-lg font-medium text-white">
+          {{ resume.personal.phone }}
+        </p>
       </a>
     </div>
 
-    <!-- CV -->
     <a
-      href="assets/cv/diogo-nogueira-cv.pdf"
+      [href]="resume.resume.cvPath"
       download
       class="mt-10 inline-flex items-center gap-2 rounded-lg bg-white px-7 py-3 font-medium text-black transition hover:bg-zinc-200"
     >
-      {{ languageService.is('pt') ? 'Baixar currículo' : 'Download resume' }}
+      {{ languageService.translations().contact.downloadResume }}
 
       <span>↓</span>
     </a>

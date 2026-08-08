@@ -1,62 +1,51 @@
 <section id="about" class="relative border-t border-white/5 py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="grid gap-16 lg:grid-cols-[1fr_1.5fr]">
-      <!-- Title -->
       <div>
         <p class="font-mono text-sm text-purple-400">
-          01 / {{ languageService.is('pt') ? 'SOBRE MIM' : 'ABOUT ME' }}
+          01 / {{ languageService.translations().about.label }}
         </p>
 
         <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          {{
-            languageService.is('pt')
-              ? 'Construindo soluções através da tecnologia.'
-              : 'Building solutions through technology.'
-          }}
+          {{ languageService.translations().about.title }}
         </h2>
       </div>
 
-      <!-- Content -->
       <div>
-        <p class="text-lg leading-8 text-zinc-400">
-          {{
-            languageService.is('pt')
-              ? 'Sou um desenvolvedor Full Stack apaixonado por tecnologia e pela criação de produtos digitais. Ao longo da minha carreira, trabalhei no desenvolvimento de aplicações web, mobile, APIs, integrações e soluções em nuvem.'
-              : 'I am a Full Stack Developer passionate about technology and building digital products. Throughout my career, I have worked on web and mobile applications, APIs, integrations and cloud-based solutions.'
-          }}
-        </p>
+        @for (paragraph of languageService.translations().about.description; track paragraph) {
+          <p class="text-lg leading-8 text-zinc-400" [class.mt-6]="$index > 0">
+            {{ paragraph }}
+          </p>
+        }
 
-        <p class="mt-6 text-lg leading-8 text-zinc-400">
-          {{
-            languageService.is('pt')
-              ? 'Meu foco está em transformar problemas complexos em soluções simples, escaláveis e fáceis de manter.'
-              : 'My focus is turning complex problems into simple, scalable and maintainable solutions.'
-          }}
-        </p>
-
-        <!-- Metrics -->
         <div class="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-8 sm:grid-cols-3">
           <div>
-            <p class="text-4xl font-semibold text-white">10+</p>
+            <p class="text-4xl font-semibold text-white">
+              {{ resume.metrics.yearsExperience }}
+            </p>
 
             <p class="mt-2 text-sm text-zinc-500">
-              {{ languageService.is('pt') ? 'Anos de experiência' : 'Years experience' }}
+              {{ languageService.translations().about.yearsExperience }}
             </p>
           </div>
 
           <div>
-            <p class="text-4xl font-semibold text-white">20+</p>
+            <p class="text-4xl font-semibold text-white">
+              {{ resume.metrics.technologies }}
+            </p>
 
             <p class="mt-2 text-sm text-zinc-500">
-              {{ languageService.is('pt') ? 'Tecnologias' : 'Technologies' }}
+              {{ languageService.translations().about.technologies }}
             </p>
           </div>
 
           <div>
-            <p class="text-4xl font-semibold text-white">∞</p>
+            <p class="text-4xl font-semibold text-white">
+              {{ resume.metrics.problemsSolved }}
+            </p>
 
             <p class="mt-2 text-sm text-zinc-500">
-              {{ languageService.is('pt') ? 'Problemas resolvidos' : 'Problems solved' }}
+              {{ languageService.translations().about.problemsSolved }}
             </p>
           </div>
         </div>

@@ -6,26 +6,26 @@
       <span class="text-purple-400">.</span>
     </a>
 
-    <!-- Desktop navigation -->
+    <!-- Navigation -->
     <div class="hidden items-center gap-8 md:flex">
       <a href="#about" class="text-sm text-zinc-400 transition hover:text-white">
-        {{ languageService.is('pt') ? 'Sobre' : 'About' }}
+        {{ languageService.translations().nav.about }}
       </a>
 
       <a href="#skills" class="text-sm text-zinc-400 transition hover:text-white">
-        {{ languageService.is('pt') ? 'Tecnologias' : 'Skills' }}
+        {{ languageService.translations().nav.skills }}
       </a>
 
       <a href="#experience" class="text-sm text-zinc-400 transition hover:text-white">
-        {{ languageService.is('pt') ? 'Experiência' : 'Experience' }}
+        {{ languageService.translations().nav.experience }}
       </a>
 
       <a href="#projects" class="text-sm text-zinc-400 transition hover:text-white">
-        {{ languageService.is('pt') ? 'Projetos' : 'Projects' }}
+        {{ languageService.translations().nav.projects }}
       </a>
 
       <a href="#contact" class="text-sm text-zinc-400 transition hover:text-white">
-        {{ languageService.is('pt') ? 'Contato' : 'Contact' }}
+        {{ languageService.translations().nav.contact }}
       </a>
     </div>
 
@@ -40,7 +40,6 @@
           [class.bg-white]="languageService.is('pt')"
           [class.text-black]="languageService.is('pt')"
           [class.text-zinc-400]="languageService.is('en')"
-          [class.hover:text-white]="languageService.is('en')"
         >
           PT
         </button>
@@ -52,7 +51,6 @@
           [class.bg-white]="languageService.is('en')"
           [class.text-black]="languageService.is('en')"
           [class.text-zinc-400]="languageService.is('pt')"
-          [class.hover:text-white]="languageService.is('pt')"
         >
           EN
         </button>
@@ -60,11 +58,11 @@
 
       <!-- CV -->
       <a
-        href="assets/cv/diogo-nogueira-cv.pdf"
+        [href]="resume.resume.cvPath"
         download
         class="hidden rounded-lg border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-300 transition hover:border-purple-400/60 hover:bg-purple-500/20 md:block"
       >
-        {{ languageService.is('pt') ? 'Baixar CV' : 'Download CV' }}
+        {{ languageService.translations().nav.downloadCv }}
       </a>
     </div>
   </div>
