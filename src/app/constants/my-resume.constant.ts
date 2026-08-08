@@ -33,7 +33,7 @@ export const MY_RESUME = {
   },
 
   resume: {
-    cvPath: 'assets/cv/diogo-nogueira-cv.pdf',
+    cvPath: '/assets/cv/diogo-nogueira-cv.pdf',
   },
 
   metrics: {
