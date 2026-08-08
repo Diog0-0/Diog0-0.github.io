@@ -7,7 +7,7 @@ import { MY_RESUME } from '../../constants/my-resume.constant';
   selector: 'app-projects',
   standalone: true,
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css',
+  styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
   readonly languageService = inject(LanguageService);

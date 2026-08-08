@@ -7,7 +7,7 @@ import { MY_RESUME } from '../../constants/my-resume.constant';
   selector: 'app-experience',
   standalone: true,
   templateUrl: './experience.component.html',
-  styleUrl: './experience.component.css',
+  styleUrl: './experience.component.scss',
 })
 export class ExperienceComponent {
   readonly languageService = inject(LanguageService);

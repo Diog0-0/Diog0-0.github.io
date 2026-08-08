@@ -50,7 +50,7 @@ export const TRANSLATIONS = {
 
     projects: {
       label: 'PROJETOS',
-      title: 'Projetos selecionados.',
+      title: 'Projetos.',
       viewProject: 'Ver projeto',
     },
 

@@ -8,7 +8,7 @@ import { MY_RESUME } from '../../constants/my-resume.constant';
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css',
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
   readonly languageService = inject(LanguageService);

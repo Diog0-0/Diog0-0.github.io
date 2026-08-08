@@ -7,7 +7,7 @@ import { MY_RESUME } from '../../constants/my-resume.constant';
   selector: 'app-about',
   standalone: true,
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css',
+  styleUrl: './about.component.scss',
 })
 export class AboutComponent {
   readonly languageService = inject(LanguageService);

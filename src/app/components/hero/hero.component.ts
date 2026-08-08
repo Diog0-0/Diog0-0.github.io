@@ -7,7 +7,7 @@ import { MY_RESUME } from '../../constants/my-resume.constant';
   selector: 'app-hero',
   standalone: true,
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css',
+  styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
   readonly languageService = inject(LanguageService);
