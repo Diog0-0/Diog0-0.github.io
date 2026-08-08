@@ -1,0 +1,91 @@
+<section id="skills" class="border-t border-white/5 py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mb-16">
+      <p class="font-mono text-sm text-purple-400">
+        02 / {{ languageService.translations().skills.label }}
+      </p>
+
+      <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+        {{ languageService.translations().skills.title }}
+      </h2>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Frontend -->
+      <div
+        class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm transition hover:border-purple-400/20"
+      >
+        <p class="font-mono text-sm text-purple-400">
+          {{ languageService.translations().skills.categories.frontend }}
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          @for (technology of resume.technologies.frontend; track technology) {
+            <span
+              class="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300"
+            >
+              {{ technology }}
+            </span>
+          }
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div
+        class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm transition hover:border-purple-400/20"
+      >
+        <p class="font-mono text-sm text-purple-400">
+          {{ languageService.translations().skills.categories.backend }}
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          @for (technology of resume.technologies.backend; track technology) {
+            <span
+              class="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300"
+            >
+              {{ technology }}
+            </span>
+          }
+        </div>
+      </div>
+
+      <!-- Cloud -->
+      <div
+        class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm transition hover:border-cyan-400/20"
+      >
+        <p class="font-mono text-sm text-cyan-400">
+          {{ languageService.translations().skills.categories.cloud }}
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          @for (technology of resume.technologies.cloud; track technology) {
+            <span
+              class="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300"
+            >
+              {{ technology }}
+            </span>
+          }
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div
+        class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 backdrop-blur-sm transition hover:border-cyan-400/20"
+      >
+        <p class="font-mono text-sm text-cyan-400">
+          {{ languageService.translations().skills.categories.database }}
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          @for (technology of resume.technologies.database; track technology) {
+            <span
+              class="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300"
+            >
+              {{ technology }}
+            </span>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

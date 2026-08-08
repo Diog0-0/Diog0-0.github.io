@@ -1,0 +1,55 @@
+<section id="about" class="relative border-t border-white/5 py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="grid gap-16 lg:grid-cols-[1fr_1.5fr]">
+      <div>
+        <p class="font-mono text-sm text-purple-400">
+          01 / {{ languageService.translations().about.label }}
+        </p>
+
+        <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          {{ languageService.translations().about.title }}
+        </h2>
+      </div>
+
+      <div>
+        @for (paragraph of languageService.translations().about.description; track paragraph) {
+          <p class="text-lg leading-8 text-zinc-400" [class.mt-6]="$index > 0">
+            {{ paragraph }}
+          </p>
+        }
+
+        <div class="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-8 sm:grid-cols-3">
+          <div>
+            <p class="text-4xl font-semibold text-white">
+              {{ resume.metrics.yearsExperience }}
+            </p>
+
+            <p class="mt-2 text-sm text-zinc-500">
+              {{ languageService.translations().about.yearsExperience }}
+            </p>
+          </div>
+
+          <div>
+            <p class="text-4xl font-semibold text-white">
+              {{ resume.metrics.technologies }}
+            </p>
+
+            <p class="mt-2 text-sm text-zinc-500">
+              {{ languageService.translations().about.technologies }}
+            </p>
+          </div>
+
+          <div>
+            <p class="text-4xl font-semibold text-white">
+              {{ resume.metrics.problemsSolved }}
+            </p>
+
+            <p class="mt-2 text-sm text-zinc-500">
+              {{ languageService.translations().about.problemsSolved }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
