@@ -8,5 +8,7 @@ export interface Project {
 
   technologies: string[];
 
-  url: string;
+  url?: string;
+
+  status?: 'completed' | 'in-progress';
 }

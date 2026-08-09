@@ -52,6 +52,8 @@ export const TRANSLATIONS = {
       label: 'PROJETOS SELECIONADOS',
       title: 'Destaques.',
       viewProject: 'Ver projeto',
+      inProgress: 'Em andamento',
+      scroll: 'Role para ver mais projetos',
     },
 
     contact: {
@@ -121,6 +123,8 @@ export const TRANSLATIONS = {
       label: 'PROJECTS SELECTED',
       title: 'Highlights.',
       viewProject: 'View project',
+      inProgress: 'In progress',
+      scroll: 'Scroll to see more projects',
     },
 
     contact: {

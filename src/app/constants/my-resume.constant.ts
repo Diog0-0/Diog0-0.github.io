@@ -290,11 +290,47 @@ export const MY_RESUME = {
 
   projects: [
     {
+      name: 'Gerador de Currículos',
+
+      description: {
+        pt: 'Plataforma para geração de documentos PDF personalizados a partir de informações estruturadas. O mesmo motor foi desenvolvido de forma flexível para diferentes necessidades, sendo utilizado na criação de currículos, recibos, comprovantes de recebimento de cargas e documentos de orçamento para trabalhos freelancer.',
+        en: 'Platform for generating customized PDF documents from structured information. The same flexible engine was designed to support different use cases, including resumes, receipts, cargo receiving documents and quotes for freelance projects.',
+      },
+
+      technologies: ['Angular', 'Tailwind', 'TypeScript', 'PDF Generation', 'Responsive Design'],
+
+      status: 'in-progress',
+    },
+
+    {
+      name: 'Minha Dieta',
+
+      description: {
+        pt: 'Aplicativo Android criado para centralizar o controle de dieta, peso, treinos e evolução. O aplicativo calcula automaticamente necessidades nutricionais, macronutrientes e metabolismo basal, registra histórico de peso e organiza treinos por dia da semana. Todo o conteúdo fica disponível offline através de um banco de dados local, proporcionando acesso instantâneo sem depender de conexão com a internet.',
+
+        en: 'Android application created to centralize diet, weight, workout and progress tracking. The app automatically calculates nutritional needs, macronutrients and basal metabolic rate, tracks weight history and organizes workouts by day of the week. All data is available offline through a local database, providing instant access without depending on an internet connection.',
+      },
+
+      technologies: [
+        'Angular',
+        'Ionic',
+        'Capacitor',
+        'Kotlin',
+        'SQLite',
+        'TypeScript',
+        'Native Plugins',
+        'Offline First',
+        'Android',
+      ],
+
+      status: 'in-progress',
+    },
+
+    {
       name: 'ICW Instabook',
 
       description: {
         pt: 'Projeto colaborativo focado em transformar perfis do Instagram em vitrines digitais inteligentes. Atuação na finalização de funcionalidades e refatorações essenciais, contribuindo para melhorias de usabilidade, qualidade de código e experiência mobile-first.',
-
         en: 'Collaborative project focused on transforming Instagram profiles into smart digital storefronts. Contributed to feature completion and essential refactoring, improving usability, code quality and the overall mobile-first experience.',
       },
 
@@ -310,6 +346,7 @@ export const MY_RESUME = {
       ],
 
       url: 'https://instabook.icw.tec.br',
+      status: 'completed',
     },
 
     {
@@ -317,7 +354,6 @@ export const MY_RESUME = {
 
       description: {
         pt: 'Redesign completo do site da corretora Contabilivre, utilizando Angular e Ionic para modernizar a experiência do usuário. O projeto incluiu adaptação do novo design para diferentes dispositivos, sistema de cache de arquivos, carregamento dinâmico, além de envio e recebimento de formulários e e-mails.',
-
         en: 'Complete redesign of the Contabilivre brokerage website using Angular and Ionic to modernize the user experience. The project included responsive design adaptation for different devices, file caching, dynamic loading, as well as contact form and email communication systems.',
       },
 
@@ -331,6 +367,7 @@ export const MY_RESUME = {
       ],
 
       url: 'https://www.contabilivre.com.br',
+      status: 'completed',
     },
 
     {
@@ -338,7 +375,6 @@ export const MY_RESUME = {
 
       description: {
         pt: 'Aplicativo desenvolvido para a Confederação Brasileira de Voleibol (CBV), voltado à criação e organização de escalações de equipes de voleibol. A aplicação foi construída com Vue.js em uma arquitetura híbrida utilizando Ionic e Capacitor, com backend em Node.js e uma infraestrutura baseada em serviços da Google Cloud Platform e AWS.',
-
         en: 'Application developed for the Brazilian Volleyball Confederation (CBV), focused on creating and organizing volleyball team lineups. The application was built with Vue.js using a hybrid architecture with Ionic and Capacitor, with a Node.js backend and infrastructure based on Google Cloud Platform services and AWS.',
       },
 
@@ -355,6 +391,7 @@ export const MY_RESUME = {
       ],
 
       url: 'https://cravada.cbv.com.br/',
+      status: 'completed',
     },
   ] as Project[],
 } as const;
