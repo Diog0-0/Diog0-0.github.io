@@ -28,9 +28,20 @@
               </div>
 
               <div>
-                <p class="text-sm font-medium text-purple-400">
-                  {{ experience.company }}
-                </p>
+                @if (experience.companyUrl) {
+                  <a
+                    [href]="experience.companyUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm font-medium text-purple-400 transition hover:text-purple-300"
+                  >
+                    {{ experience.company }}
+                  </a>
+                } @else {
+                  <p class="text-sm font-medium text-purple-400">
+                    {{ experience.company }}
+                  </p>
+                }
 
                 <h3 class="mt-1 text-2xl font-semibold text-white">
                   {{ experience.role[languageService.language()] }}
