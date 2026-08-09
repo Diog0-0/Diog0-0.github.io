@@ -49,8 +49,8 @@ export const TRANSLATIONS = {
     },
 
     projects: {
-      label: 'PROJETOS',
-      title: 'Projetos.',
+      label: 'PROJETOS SELECIONADOS',
+      title: 'Destaques.',
       viewProject: 'Ver projeto',
     },
 
@@ -118,8 +118,8 @@ export const TRANSLATIONS = {
     },
 
     projects: {
-      label: 'PROJECTS',
-      title: 'Selected work.',
+      label: 'PROJECTS SELECTED',
+      title: 'Highlights.',
       viewProject: 'View project',
     },
 

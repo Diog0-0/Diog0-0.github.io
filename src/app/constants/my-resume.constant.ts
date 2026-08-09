@@ -1,3 +1,4 @@
+import { Experience } from '../interfaces/experience.interface';
 import { Project } from '../interfaces/project.interface';
 
 export const MY_RESUME = {
@@ -80,6 +81,7 @@ export const MY_RESUME = {
       },
 
       company: 'Be220',
+      companyUrl: 'https://be220.com.br/',
 
       location: {
         pt: 'Porto Alegre, RS',
@@ -116,6 +118,7 @@ export const MY_RESUME = {
       },
 
       company: 'Outra Coisa',
+      companyUrl: 'https://outracoisa.co/',
 
       location: {
         pt: 'Rio de Janeiro, RJ',
@@ -182,6 +185,7 @@ export const MY_RESUME = {
       },
 
       company: 'Cetro Máquinas',
+      companyUrl: 'https://www.cetro.com.br/',
 
       location: {
         pt: 'Bauru, SP',
@@ -212,7 +216,7 @@ export const MY_RESUME = {
         'Redis',
       ],
     },
-  ],
+  ] as Experience[],
 
   education: [
     {
@@ -333,9 +337,9 @@ export const MY_RESUME = {
       name: 'Cravada',
 
       description: {
-        pt: 'Aplicativo desenvolvido para a Confederação Brasileira de Voleibol (CBV), voltado à criação e organização de escalações de equipes de voleibol. A aplicação foi construída com Vue.js em uma arquitetura híbrida utilizando Ionic e Capacitor, com backend em Node.js e uma infraestrutura baseada em serviços da Google Cloud Platform, Firestore, MongoDB, AWS e Firebase Functions.',
+        pt: 'Aplicativo desenvolvido para a Confederação Brasileira de Voleibol (CBV), voltado à criação e organização de escalações de equipes de voleibol. A aplicação foi construída com Vue.js em uma arquitetura híbrida utilizando Ionic e Capacitor, com backend em Node.js e uma infraestrutura baseada em serviços da Google Cloud Platform e AWS.',
 
-        en: 'Application developed for the Brazilian Volleyball Confederation (CBV), focused on creating and organizing volleyball team lineups. The application was built with Vue.js using a hybrid architecture with Ionic and Capacitor, with a Node.js backend and infrastructure based on Google Cloud Platform services, Firestore, MongoDB, AWS and Firebase Functions.',
+        en: 'Application developed for the Brazilian Volleyball Confederation (CBV), focused on creating and organizing volleyball team lineups. The application was built with Vue.js using a hybrid architecture with Ionic and Capacitor, with a Node.js backend and infrastructure based on Google Cloud Platform services and AWS.',
       },
 
       technologies: [
