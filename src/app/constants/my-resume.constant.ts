@@ -56,7 +56,6 @@ export const MY_RESUME = {
       'Firebase',
       'DigitalOcean',
       'Docker',
-      'Kubernetes',
       'CapRover',
       'CI/CD',
     ],
@@ -94,9 +93,9 @@ export const MY_RESUME = {
       },
 
       description: {
-        pt: 'Desenvolvimento de aplicações web e móveis utilizando tecnologias modernas, com foco em interfaces responsivas, performance e experiência do usuário. Integração com meios de pagamento e desenvolvimento de soluções utilizando IA e automação, incluindo Codex e agentes. Colaboração na documentação técnica, testes de usabilidade e evolução contínua dos produtos em conjunto com equipes multidisciplinares.',
+        pt: 'Atuação na unidade responsável pelo desenvolvimento de novos sistemas, conduzindo projetos greenfield de forma autônoma, desde a concepção até a entrega do MVP. Responsável por transformar requisitos de negócio em soluções técnicas, definindo arquitetura, modelagem de dados, integrações, serviços, estratégias de cache e organização do código. Desenvolvimento de aplicações web, mobile e PWA com Angular, Ionic, Capacitor, TypeScript e React, além de APIs e serviços backend com Node.js. Arquitetura e implementação de soluções utilizando Firebase, Cloud Firestore e Google Cloud Platform, incluindo Cloud Run, Cloud Functions, Cloud Storage, Pub/Sub, Cloud Scheduler e Secret Manager, com pipelines de CI/CD. Desenvolvimento de integrações com gateways de pagamento como Asaas e Pagar.me, além de soluções de mensageria e processamento assíncrono. Comunicação direta com clientes para levantamento de requisitos e definição de soluções, participação na definição de padrões e boas práticas para novos projetos e decisões de arquitetura e engenharia por meio do comitê de qualidade. Experiência também com sustentação e resolução de problemas em produção.',
 
-        en: 'Development of web and mobile applications using modern technologies, focusing on responsive interfaces, performance and user experience. Integration with payment providers and development of AI and automation solutions, including Codex and agents. Collaboration on technical documentation, usability testing and continuous product improvement alongside multidisciplinary teams.',
+        en: 'Work within the unit responsible for developing new systems, autonomously leading greenfield projects from conception to MVP delivery. Responsible for translating business requirements into technical solutions, defining architecture, data modeling, integrations, services, caching strategies and code organization. Development of web, mobile and PWA applications using Angular, Ionic, Capacitor, TypeScript and React, as well as backend APIs and services with Node.js. Architecture and implementation of solutions using Firebase, Cloud Firestore and Google Cloud Platform, including Cloud Run, Cloud Functions, Cloud Storage, Pub/Sub, Cloud Scheduler and Secret Manager, with CI/CD pipelines. Development of integrations with payment gateways such as Asaas and Pagar.me, as well as messaging and asynchronous processing solutions. Direct communication with clients for requirements gathering and solution definition, participation in defining standards and best practices for new projects, and involvement in architecture and engineering decisions through the company quality committee. Experience with production support and troubleshooting.',
       },
 
       technologies: [
